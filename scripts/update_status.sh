@@ -21,7 +21,7 @@ curl -s -X POST \
   -d @- <<EOF_JSON
 {
   "state": "$STATE",
-  "environment": "test",
+  "environment": "$GITHUB_ENV",
   "description": "Statut mis à jour vers $STATE"
 }
 EOF_JSON
