@@ -21,7 +21,7 @@ DEPLOYMENT_RESPONSE=$(curl -s -X POST \
   -d @- <<EOF_JSON
 {
   "ref": "$BRANCH",
-  "environment": "test",
+  "environment": "$GITHUB_ENV",
   "description": "$DESCRIPTION",
   "required_contexts": [],
   "transient_environment": true,
