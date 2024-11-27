@@ -52,10 +52,12 @@ Créez un fichier `.env` avec les variables suivantes :
 - `GITHUB_TOKEN` : Votre token GitHub.
 - `GITHUB_REPO` : Nom du dépôt au format `user/repo`.
 - `GITHUB_ENV` : Nom de l'environnement
+- `DEPLOYMENT_URL` : Url de l'environnement
 
 ## Exemple
 ```
 GITHUB_TOKEN=ghp_votreToken
 GITHUB_REPO=votre-username/deployment-structure
 GITHUB_ENV=staging-1
+DEPLOYMENT_URL="https://example.com"
 ```
