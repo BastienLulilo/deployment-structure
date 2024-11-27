@@ -25,15 +25,25 @@ apt get install jq
 ./scripts/get.sh
 ```
 
+### Supprimer un déploiement
+```bash
+./scripts/clear_deployment.sh <deployment_id>
+```
+
 ### Récupérer tous id de déploiement
 ```bash
 ./scripts/get.sh > response.json
 jq '.[].id' response.json
 ```
 
-### Supprimer un déploiement
+### Boucle d'action sur les id de déploiement
+Ici l'exemple, prend les ids, les met tous en inactif, puis les supprimes.
 ```bash
-./scripts/clear_deployment.sh <deployment_id>
+./scripts/get.sh > response.json
+for id in $(jq -r '.[].id' response.json); do
+    ./scripts/update_status.sh "$id" "inactive"
+    ./scripts/clear_deployment.sh "$id"
+done
 ```
 
 ## Configuration
