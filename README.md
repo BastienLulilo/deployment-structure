@@ -16,6 +16,7 @@ apt get install jq
 ```
 
 ### Mettre à jour le statut d'un déploiement
+Liste des status dispo : error, failure, inactive, in_progress, queued, pending, success
 ```bash
 ./scripts/update_status.sh <deployment_id> <state>
 ```
