@@ -22,7 +22,8 @@ curl -s -X POST \
 {
   "state": "$STATE",
   "environment": "$GITHUB_ENV",
-  "description": "Statut mis à jour vers $STATE"
+  "description": "Statut mis à jour vers $STATE",
+  "environment_url": "$DEPLOYMENT_URL"
 }
 EOF_JSON
 

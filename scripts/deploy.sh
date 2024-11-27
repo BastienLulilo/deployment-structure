@@ -25,7 +25,9 @@ DEPLOYMENT_RESPONSE=$(curl -s -X POST \
   "description": "$DESCRIPTION",
   "required_contexts": [],
   "transient_environment": true,
-  "auto_merge": false
+  "auto_merge": false,
+  "target_url": "https://example.com",
+  "branch" : "master"
 }
 EOF_JSON
 )
